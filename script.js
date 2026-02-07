@@ -1,7 +1,7 @@
 //your JS code here. If required.
 const container = document.getElementById('container');
 
-// Set of colors that are guaranteed different from dark gray
+// Fixed set of hover colors (none of these are rgb(29,29,29))
 const hoverColors = [
   '#FF5733', '#33FF57', '#3357FF', '#F1C40F', '#9B59B6', '#E67E22', '#1ABC9C'
 ];
@@ -16,7 +16,7 @@ for (let i = 0; i < 800; i++) {
 
   // Hover effect
   square.addEventListener('mouseenter', () => {
-    // Pick a color from the array
+    // Pick a random hover color (never dark gray)
     const color = hoverColors[Math.floor(Math.random() * hoverColors.length)];
     square.style.backgroundColor = color;
 
